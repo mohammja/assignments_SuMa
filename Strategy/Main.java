@@ -14,21 +14,18 @@ public class Main {
         colours.add("white");
         colours.add("black");
 
-        ListConverter converter;
+        ListConverter strategy1 = new Strategy1();
+        ListConverter strategy2 = new Strategy2();
+        ListConverter strategy3 = new Strategy3();
 
-        converter = new Strategy1();
-        String result = converter.listToString(colours);
+
         System.out.println("Strategy1:");
-        System.out.println(result);
+        System.out.println(strategy1.listToString(colours));
 
-        converter = new Strategy2();
-        result = converter.listToString(colours);
         System.out.println("Strategy2:");
-        System.out.println(result);
+        System.out.println(strategy2.listToString(colours));
 
-        converter = new Strategy3();
-        result = converter.listToString(colours);
         System.out.println("Strategy3:");
-        System.out.println(result);
+        System.out.println(strategy3.listToString(colours));
     }
 }
