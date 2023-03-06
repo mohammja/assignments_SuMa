@@ -6,8 +6,9 @@ class Strategy2 implements ListConverter {
     @Override
     public String listToString(List<String> list) {
         String result = "";
-        for (int i = 0; i < list.size(); i++) {
-            result += list.get(i) + ((i % 2 == 1) ? "\n" : ", ");
+        String[] array = list.toArray(new String[0]);
+        for (int i = 0; i < array.length; i++) {
+            result += array[i] + ((i % 2 == 1) ? "\n" : ", ");
         }
         return result;
     }
