@@ -6,8 +6,9 @@ public class YrityksenCEOHandler implements KorotusHandler{
     public void handleRequest(KorotusRequest request) {
 
         if (request.getKorotus() > 5){
-            System.out.println("CEO: " +request.getKorotus() + "% korotus on käsitelyssä");
+            System.out.println("CEO: " +request.getKorotus() + "% korotus on hyväksytty!...........\n");
         }else if (successor != null){
+            System.out.println("hylätty");
             successor.handleRequest(request);
         }
     }

@@ -8,6 +8,7 @@ public class    EsimiesHandler implements KorotusHandler {
         if (request.getKorotus() <= 2) {
             System.out.println("Esimies: " + request.getKorotus() + "% Korotus on hyväksytty");
         }else if (successor != null) {
+            System.out.println("Ohjataan korotuspyyntö yksikön päällikkölle!...........\n");
             successor.handleRequest(request);
         }
     }

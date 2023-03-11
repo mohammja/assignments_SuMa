@@ -1,6 +1,6 @@
 package ChainOfResponsibility;
 
-public class Main {
+public class KorotusPyyntoHyvaksaminen {
     public static void main(String[] args) {
 
         YrityksenCEOHandler ceoHandler = new YrityksenCEOHandler();
@@ -20,7 +20,7 @@ public class Main {
         esimiesHandler.handleRequest(request2);
 
 
-        System.out.println("\nSecond way by using handlerManager......\n");
+        System.out.println("Second way by using handlerManager......\n");
         //2. way while using handlerManager class:
 
         HandlerManager handlerManager = new HandlerManager();
@@ -28,7 +28,7 @@ public class Main {
         handlerManager.addHandler(new YksikonPaallikkoHandler());
         handlerManager.addHandler(new YrityksenCEOHandler());
 
-        handlerManager.handleRequest(request);
+        handlerManager.handleRequest(request2);
 
 
     }

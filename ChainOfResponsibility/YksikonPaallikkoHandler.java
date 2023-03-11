@@ -9,6 +9,7 @@ public class YksikonPaallikkoHandler implements KorotusHandler {
         if (request.getKorotus() > 2 && request.getKorotus() <= 5) {
             System.out.println("Yksikön päällikkö: " + request.getKorotus() + "% korotus on hyväksytty.");
         }else if (successor != null) {
+            System.out.println("Ohjataan korotuspyyntö CEO:lle!...........\n");
             successor.handleRequest(request);
         }
     }
