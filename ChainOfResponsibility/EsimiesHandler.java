@@ -5,7 +5,7 @@ public class    EsimiesHandler implements KorotusHandler {
 
     @Override
     public void handleRequest(KorotusRequest request) {
-        if (request.getKorotus() < 2) {
+        if (request.getKorotus() <= 2) {
             System.out.println("Esimies: " + request.getKorotus() + "% Korotus on hyväksytty");
         }else if (successor != null) {
             successor.handleRequest(request);
