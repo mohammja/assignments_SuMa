@@ -16,8 +16,6 @@ public class Main {
         // Check if the state should change
         atm.checkStateChange(new ATMVisitor());
 
-//        // Withdraw cash
-//        atm.withdrawCash(100);
 
         // Check if the state should change
         atm.checkStateChange(new ATMVisitor());
