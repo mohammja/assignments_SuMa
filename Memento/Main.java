@@ -9,12 +9,12 @@ public class Main {
         Pelaaja[] pelaajat = new Pelaaja[numOfPelaajat];
 
         for (int i = 0; i < numOfPelaajat; i++) {
-            pelaajat[i] = new Pelaaja(arvuuttaja, arvuuttaja.liityPeliin());
+            pelaajat[i] = new Pelaaja(arvuuttaja);
         }
 
         for (Pelaaja pelaaja : pelaajat) {
-            Thread pelaaja1 = new Thread(pelaaja);
-            pelaaja1.start();
+            Thread pelaajaThread = new Thread(pelaaja);
+            pelaajaThread.start();
         }
     }
 }

@@ -1,21 +1,16 @@
 package Memento;
 
 public class Pelaaja implements Runnable {
-
     private final Arvuuttaja arvuuttaja;
-    private final Memento memento;
 
-
-
-    public Pelaaja(Arvuuttaja arvuuttaja1, Memento memento1) {
-        this.arvuuttaja = arvuuttaja1;
-        this.memento = memento1;
+    public Pelaaja(Arvuuttaja arvuuttaja) {
+        this.arvuuttaja = arvuuttaja;
     }
 
     @Override
     public void run() {
         int arvaus = 0;
-        while (!arvuuttaja.arvaa(memento, arvaus)) {
+        while (!arvuuttaja.arvaa(arvaus)) {
             arvaus = arvaus();
             try {
                 Thread.sleep(1000);
