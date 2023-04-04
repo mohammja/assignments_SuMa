@@ -11,22 +11,12 @@ public class Main {
             System.out.println();
 
             if ((i + 1) % 3 == 0) {
-                switch (i) {
-                    case 2:
-                        charmander.setState(new CharmeleonState());
-                        System.out.println("Charmander has evolved into Charmeleon!");
-                        break;
-                    case 5:
-                        charmander.setState(new CharizardState());
-                        System.out.println("Charmeleon has evolved into Charizard!");
-                        break;
-                    default:
-                        break;
+               charmander.evolve();
                 }
             }
         }
     }
-}
+
 
 
 
